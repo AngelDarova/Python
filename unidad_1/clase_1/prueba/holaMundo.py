@@ -1,0 +1,1 @@
+print("Hola estudiantes DevSeniorCode Cohorte 7!")
