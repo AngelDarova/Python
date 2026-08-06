@@ -31,4 +31,4 @@ class Producto:
             Verifica si hay stock suficiente
         """
         print
-        
+        # comentario opcinal

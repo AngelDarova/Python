@@ -16,3 +16,5 @@ class Venta:
             Metodo mostrar los detalles de la venta
         """
         print("Metodo mostrar() pendiente")
+        
+        #comentario opcional
