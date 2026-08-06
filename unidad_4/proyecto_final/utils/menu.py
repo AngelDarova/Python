@@ -13,5 +13,5 @@ def mostrar_menu():
     print("8. Salir")
     
     opcion = input("Seleccione una opción: ")
-    
+    return opcion
     
