@@ -16,3 +16,4 @@ class Ventas:
     def total_vendido(self):
         print("\n[Ventas]")
         print("Calcular total vendido (pendiente)")
+        

@@ -1,7 +1,7 @@
 class Venta:
     def __init__(self):
         """
-         Constructor de la clase Venta
+        Constructor de la clase Venta
         """
         pass
     
@@ -17,4 +17,4 @@ class Venta:
         """
         print("Metodo mostrar() pendiente")
         
-        #comentario opcional
+        #comentario opcionals

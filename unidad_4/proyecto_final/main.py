@@ -1,6 +1,7 @@
 from utils.menu import mostrar_menu
 from services.inventario import Inventario
 from services.ventas import Ventas
+from models.producto import Producto
 
 def main():
     
@@ -39,5 +40,30 @@ def main():
         else:
             print("\nOpcion invalida.")
             
-main()
+producto = Producto(
+    "P001",
+    "teclado Logitech",
+    180000,
+    20
+)
+
+producto.mostrar()
+print("\n¿Hay 5 unidades disponibles?")
+print(producto.hay_stock(5))
+
+print("\n¿Hay 25 unidades disponibles?")
+print(producto.hay_stock(25))
+
+print("\nVendiendo 3 unidades...")
+resultado = producto.disminuir_stock(3)
+
+if(resultado):
+    print("Venta realizada")
+else:
+    print("Venta no realizada")
+    
+producto.mostrar()
+
+
+#main()
     
