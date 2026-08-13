@@ -1,20 +1,18 @@
+from models.producto import Producto
+
 class Venta:
-    def __init__(self):
-        """
-        Constructor de la clase Venta
-        """
+    def __init__(self, producto: Producto, cantidad: int):
+        self.producto = producto
+        self.cantidad = cantidad
+        self.precio_unitario = producto.precio
         pass
     
     def calcular_total(self):
-        """
-        Metodo calcular el total de la venta
-        """
-        print("Metodo calcular_total() pendiente")
+        return self.cantidad * self.precio_unitario
+        
         
     def mostrar(self):
-        """
-            Metodo mostrar los detalles de la venta
-        """
-        print("Metodo mostrar() pendiente")
-        
-        #comentario opcionals
+        print(f"Producto: {self.producto.nombre}")
+        print(f"Cantidad: {self.cantidad}")
+        print(f"Precio unitario: {self.precio_unitario}")
+        print(f"Total: {self.calcular_total()}")

@@ -23,6 +23,11 @@ class Producto:
         print(f"Precio {self.precio}")
         print(f"Stock {self.stock}")
         
+    def mostrar_basico(self):
+        print(f"Codigo{self.codigo}")
+        print(f"Nombre{self.nombre}")
+        print(f"Precio{self.precio}")
+        
     print("Método mostrar () pendiente de implementar")
     
     def aumentar_stock(self, cantidad):

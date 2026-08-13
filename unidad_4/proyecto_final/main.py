@@ -2,6 +2,7 @@ from utils.menu import mostrar_menu
 from services.inventario import Inventario
 from services.ventas import Ventas
 from models.producto import Producto
+from models.venta import Venta
 
 def main():
 
@@ -69,7 +70,7 @@ else:
 producto.mostrar()
 
 """
-
+"""
 inventario = Inventario()
 print("Se crean dos productos...")
 inventario.registrar_producto("P001", "teclado logitech", 18000, 10)
@@ -90,6 +91,12 @@ print(f"cantidad de productos en lista: {inventario.mostrar_cantidad_productos()
 print("Eliminando el producto P002")
 inventario.eliminar_producto("P002")
 print(f"cantidad de productos en lista: {inventario.mostrar_cantidad_productos()}")
-
+"""
 #main()
+
+producto = Producto("P001", "Teclado inalambrico", 180, 10)
+
+venta = Venta(producto, 11)
+
+venta.mostrar()
 
