@@ -6,7 +6,7 @@ class Venta:
         self.cantidad = cantidad
         self.precio_unitario = producto.precio
         pass
-    
+    #cada venta es responsable de saber cual es su total
     def calcular_total(self):
         return self.cantidad * self.precio_unitario
         

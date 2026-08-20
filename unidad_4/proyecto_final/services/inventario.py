@@ -3,12 +3,13 @@ from models.producto import Producto
 class Inventario:
 
 
-    def __init__(self):
+    def __init__(self, repository):
         """
             Aqui represento el inventario en una estructra de lista, porque me interesa
             el orden de inserción.
         """
-        self.productos = [] # Es clave no perder de vista el atribbuto de la clase
+        self.repository = repository
+        self.productos = self.repository.cargar()
 
     def registrar_producto(self, codigo, nombre, precio, stock):
         """
@@ -16,6 +17,7 @@ class Inventario:
         """
         producto = Producto(codigo, nombre, precio, stock) # aqui creamos internamente el producto que agregaremos al inventario (stand).
         self.productos.append(producto) # aqui agregamos el producto al inventario (lista)
+        self.repository.guardar(self.productos)
         print(f"El producto {producto.nombre} ha sido agregado exitosamente")
 
     
@@ -53,6 +55,7 @@ class Inventario:
             print("Producto no encontrado")
             return
         self.productos.remove(producto)
+        self.repository.guardar(self.productos)
         print("Producto eliminado exitosamente")
 
     def mostrar_cantidad_productos(self):
